@@ -90,7 +90,7 @@ function draw() {
     { id: 69, label: "Ralph", group: 5 },
     { id: 70, label: "The Royal Government", group: 11, shape: 'box'},
     { id: 71, label: "Nifa", group: 2, opacity: 0.5 },
-    //{ id: 72, label: "Reiss Family", group: 12, shape: 'box'},
+    { id: 72, label: "Reiss Family", group: 12, shape: 'box'},
     { id: 73, label: "Rod Reiss", group: 12 },
     { id: 74, label: "Uri Reiss", group: 12, opacity: 0.5 },
     { id: 75, label: "Frieda Reiss", group: 12, opacity: 0.5 },
@@ -115,15 +115,14 @@ for (let i = 0; i < nodes.length ; i++) {
 
   //negative edges
   let neg = [];
-  var matches = ['Reiner Braun/Armored Titan','Bertholdt Hoover/Colossal Titan', 'Annie Leonhart/Female Titan', 'Nile Dok', 'Military Police',  
-  'Kenny Ackermann'];
+  var matches = ['Nile Dok', 'Military Police', 'Kenny Ackermann'];
   if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
   if ( neg.includes(nodes[i].id)){ edges.push({from: 0, to: nodes[i].id, color: "red"}) }
 
    //positive edges
    let pos = [];
    var matches2 = ['Mikasa Ackermann','Hange Zoe','Erwin Smith','Conny Springer','Armin Arlert', 'Hannes', 'Grisha Jaeger','Sasha Braus',
-   'Jean Kirschtein','Levi Ackermann', 'Survery Corps', 'Christa Lenz/Historia Reiss', 'Ymir/Jaw Titan'];
+   'Jean Kirschtein','Levi Ackermann', 'Survery Corps', 'Christa Lenz/Historia Reiss'];
    if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
    if ( pos.includes(nodes[i].id)){ edges.push({from: 0, to: nodes[i].id, color: "green"}) }
 }
@@ -132,14 +131,14 @@ for (let i = 0; i < nodes.length ; i++) {
 for (let i = 0; i < nodes.length ; i++) {
   //negative edges
   let neg = [];
-  var matches = ['Dino Reeves', "Bertholdt Hoover/Colossal Titan", "Reiner Braun/Armored Titan","Annie Leonhart/Female Titan", "Kenny Ackermann"];
+  var matches = ["Kenny Ackermann"];
   if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
   if ( neg.includes(nodes[i].id)){ edges.push({from: 1, to: nodes[i].id, color: "red"}) }
 
    //positive edges
    let pos = [];
    var matches2 = ["Dot Pixis","Hannes", "Survey Corps","Grisha Jaeger", "Sasha Braus","Armin Arlert", "Christa Lenz/Historia Reiss",
-   "Jean Kirschtein","Conny Springer","Ymir/Jaw Titan", "Levi Ackermann"];
+   "Jean Kirschtein","Conny Springer", "Levi Ackermann", "Dino Reeves"];
    if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
    if ( pos.includes(nodes[i].id)){ edges.push({from: 1, to: nodes[i].id, color: "green"}) }
 }
@@ -148,14 +147,14 @@ for (let i = 0; i < nodes.length ; i++) {
 for (let i = 0; i < nodes.length ; i++) {
   //negative edges
   let neg = [];
-  var matches = ['Reiner Braun/Armored Titan', 'Bertholdt Hoover/Colossal Titan', 'Annie Leonhart/Female Titan'];
+  var matches = ["Kenny Ackermann"];
   if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
   if ( neg.includes(nodes[i].id)){ edges.push({from: 2, to: nodes[i].id, color: "red"}) }
 
    //positive edges
    let pos = [];
    var matches2 = ['Christa Lenz/Historia Reiss', 'Sasha Braus', 'Jean Kirschtein', 'Conny Springer', "Levi Ackermann", 
-   "Erwin Smith", "Hange Zoë", "Survey Corps", "Dot Pixis", "Hannes", "Ymir/Jaw Titan", 'Nifa'];
+   "Erwin Smith", "Hange Zoë", "Survey Corps", "Dot Pixis", "Hannes", 'Nifa', "Dino Reeves"];
    if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
    if ( pos.includes(nodes[i].id)){ edges.push({from: 2, to: nodes[i].id, color: "green"}) }
 }
@@ -170,7 +169,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 6, to: nodes[i].id, color: "r
 
  //positive edges
  let pos = [];
- var matches2 = ["Hange Zoë", "Survey Corps","Conny Springer", "Sasha Braus", "Jean Kirschtein", "Ymir/Jaw Titan"];
+ var matches2 = ["Hange Zoë", "Survey Corps","Conny Springer", "Sasha Braus", "Jean Kirschtein"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 6, to: nodes[i].id, color: "green"}) }
 }
@@ -185,7 +184,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 7, to: nodes[i].id, color: "r
 
  //positive edges
  let pos = [];
- var matches2 = ['Jean Kirschtein', 'Conny Springer', "Levi Ackermann", "Erwin Smith", "Survey Corps", "Ymir/Jaw Titan"];
+ var matches2 = ['Jean Kirschtein', 'Conny Springer', "Levi Ackermann", "Erwin Smith", "Survey Corps"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 7, to: nodes[i].id, color: "green"}) }
 }
@@ -200,7 +199,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 8, to: nodes[i].id, color: "r
 
  //positive edges
  let pos = [];
- var matches2 = ['Conny Springer', "Levi Ackermann", "Erwin Smith", "Hange Zoë", "Survey Corps", "Military Police", "Ymir/Jaw Titan"];
+ var matches2 = ['Conny Springer', "Levi Ackermann", "Erwin Smith", "Hange Zoë", "Survey Corps", "Military Police"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 8, to: nodes[i].id, color: "green"}) }
 }
@@ -216,7 +215,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 10, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Levi Ackermann", "Erwin Smith", "Hange Zoë", "Survey Corps", "Ymir/Jaw Titan", "Conny's Mother", "Dot Pixis"];
+ var matches2 = ["Levi Ackermann", "Erwin Smith", "Hange Zoë", "Survey Corps", "Conny's Mother", "Dot Pixis"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 10, to: nodes[i].id, color: "green"}) }
 }
@@ -255,15 +254,15 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 12, to: nodes[i].id, color: "
 for (let i = 0; i < nodes.length ; i++) {
 //negative edges
 let neg = [];
-var matches = ["Sawney", "Beane"];
+var matches = [];
 if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
-if ( neg.includes(nodes[i].id)){ edges.push({from: 13, to: nodes[i].id, color: "red"}) }
+if ( neg.includes(nodes[i].id)){ edges.push({from: 51, to: nodes[i].id, color: "red"}) }
 
  //positive edges
  let pos = [];
  var matches2 = ["Survey Corps", "Levi Ackermann", "Conny's Mother"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
- if ( pos.includes(nodes[i].id)){ edges.push({from: 13, to: nodes[i].id, color: "green"}) }
+ if ( pos.includes(nodes[i].id)){ edges.push({from: 51, to: nodes[i].id, color: "green"}) }
 }
 
 //Hange Zoë
@@ -366,7 +365,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 64, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Marlowe Freudenberg", "Survey Corps", "Military Police", "Annie Leonhart/Female Titan"];
+ var matches2 = ["Marlowe Freudenberg", "Survey Corps", "Military Police"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 64, to: nodes[i].id, color: "green"}) }
 }
@@ -381,7 +380,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 65, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Survey Corps", "Military Police", "Annie Leonhart/Female Titan"];
+ var matches2 = ["Survey Corps", "Military Police"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 65, to: nodes[i].id, color: "green"}) }
 }
@@ -488,7 +487,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 72, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Uri Reiss","Rod Reiss", "King Fritz", "Anti-Personnel Control Squad"];
+ var matches2 = ["Uri Reiss", "Rod Reiss", "King Fritz", "Anti-Personnel Control Squad"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 72, to: nodes[i].id, color: "green"}) }
 }
@@ -503,7 +502,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 73, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Fredia Reiss", "Military Police", "Anti-Personnel Control Squad"];
+ var matches2 = ["Fredia Reiss", "Military Police", "Anti-Personnel Control Squad", "Christa Lenz/Historia Reiss"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 73, to: nodes[i].id, color: "green"}) }
 }
@@ -533,7 +532,7 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 75, to: nodes[i].id, color: "
 
  //positive edges
  let pos = [];
- var matches2 = ["Uri Reiss", "Rod Reiss", "Reiss Family", "Anti-Personnel Control Squad"];
+ var matches2 = ["Uri Reiss", "Rod Reiss", "Reiss Family", "Anti-Personnel Control Squad", "Christa Lenz/Historia Reiss"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 75, to: nodes[i].id, color: "green"}) }
 }
@@ -628,64 +627,47 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 81, to: nodes[i].id, color: "
  if ( pos.includes(nodes[i].id)){ edges.push({from: 81, to: nodes[i].id, color: "green"}) }
 }
 
-//titans
-for (let i = 0; i < nodes.length ; i++) {
-//negative edges
-let neg = [];
 
-var matches = ["Eren Jaeger/Attack Titan", "Mikasa Ackermann", "Armin Arlert","Christa Lenz", "Sasha Braus", "Jean Kirschtein",
-"Conny Springer", "Levi Ackermann", "Erwin Smith", "Hange Zoë", "Dot Pixis", "Kitz Woermann", "Rico Brzensk", "Hannes"];
-if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
-if ( neg.includes(nodes[i].id)){ edges.push({from: 100, to: nodes[i].id, color: "red"}) }
+console.log("Nodes: ", nodes.length)
+console.log("Edges: ", edges.length)
+degreeDis = {}
+colorDis = {}
 
- //positive edges
- let pos = [];
- var matches2 = [];
- if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
- if ( pos.includes(nodes[i].id)){ edges.push({from: 100, to: nodes[i].id, color: "green"}) }
+edges.forEach(element => {
+let nameFrom = nodes.find(n => n.id === element.from)["label"];
+if(degreeDis.hasOwnProperty(nameFrom)){
+  degreeDis[nameFrom] += 1
+}else{
+  degreeDis[nameFrom] = 0
 }
 
+let nameTo = nodes.find(n => n.id === element.to)["label"];
+if(degreeDis.hasOwnProperty(nameTo)){
+  degreeDis[nameTo] += 1
+}else{
+  degreeDis[nameTo] = 0
+}
 
+if(colorDis.hasOwnProperty(element.color)){
+  colorDis[element.color] += 1
+}else{
+  colorDis[element.color] = 0
+}
+});
 
-// console.log(edges.length, nodes.length)
-// degreeDis = {}
-// colorDis = {}
+// Create items array
+var items = Object.keys(degreeDis).map(function(key) {
+return [key, degreeDis[key]];
+});
 
-// edges.forEach(element => {
-//   console.log(element);
-//   let nameFrom = nodes.find(n => n.id === element.from)["label"];
-//   if(degreeDis.hasOwnProperty(nameFrom)){
-//     degreeDis[nameFrom] += 1
-//   }else{
-//     degreeDis[nameFrom] = 0
-//   }
+// Sort the array based on the second element
+items.sort(function(first, second) {
+return second[1] - first[1];
+});
 
-//   let nameTo = nodes.find(n => n.id === element.to)["label"];
-//   if(degreeDis.hasOwnProperty(nameTo)){
-//     degreeDis[nameTo] += 1
-//   }else{
-//     degreeDis[nameTo] = 0
-//   }
-
-//   if(colorDis.hasOwnProperty(element.color)){
-//     colorDis[element.color] += 1
-//   }else{
-//     colorDis[element.color] = 0
-//   }
-// });
-
-// // Create items array
-// var items = Object.keys(degreeDis).map(function(key) {
-//   return [key, degreeDis[key]];
-// });
-
-// // Sort the array based on the second element
-// items.sort(function(first, second) {
-//   return second[1] - first[1];
-// });
-
-// console.log(items)
-// console.log(colorDis)
+//console.log(degreeDis);
+console.log("Degree Distribution:", items)
+console.log("Graph Coloring:", colorDis)
 
 
   // create a network
@@ -742,19 +724,10 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 100, to: nodes[i].id, color: 
     },
   };
   var network = new vis.Network(container, data, options);
-  // for(c in nodes){
-  //   console.log(nodes[c].label,network.getConnectedEdges(c.toString()).length)
-  //   nodes[c].value = network.getConnectedEdges(c.toString()).length
-
-  //   let dead = [];
-  //   var deadChars = ["Dino Reeves","Pastor Nick"];
-  //   if (~ matches2.indexOf(nodes[c].label)) { dead.push(nodes[c].id)}
-  //   if ( dead.includes(nodes[c].id)){network.getConnectedEdges(c.toString()).map(obj => ({...obj,color:{opacity: 0.2 }}))}
-  // }
-  
-  network = new vis.Network(container, data, options);
-}
+ }
 
 window.addEventListener("load", () => {
   draw();
 });
+
+//draw();

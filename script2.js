@@ -534,13 +534,13 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 59, to: nodes[i].id, color: "
 for (let i = 0; i < nodes.length ; i++) {
 //negative edges
 let neg = [];
-var matches = ["Marlowe Freudenberg"];
+var matches = [];
 if (~ matches.indexOf(nodes[i].label)) { neg.push(nodes[i].id)}
 if ( neg.includes(nodes[i].id)){ edges.push({from: 64, to: nodes[i].id, color: "red"}) }
 
  //positive edges
  let pos = [];
- var matches2 = [];
+ var matches2 = ["Marlowe Freudenberg"];
  if (~ matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id)}
  if ( pos.includes(nodes[i].id)){ edges.push({from: 64, to: nodes[i].id, color: "green"}) }
 }
@@ -563,7 +563,8 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 100, to: nodes[i].id, color: 
 }
 
 
-console.log(edges.length, nodes.length)
+console.log("Nodes: ", nodes.length)
+console.log("Edges: ", edges.length)
 degreeDis = {}
 colorDis = {}
 
@@ -599,9 +600,9 @@ items.sort(function(first, second) {
 return second[1] - first[1];
 });
 
-console.log(items)
-console.log(colorDis)
-
+//console.log(degreeDis);
+console.log("Degree Distribution:", items)
+console.log("Graph Coloring:", colorDis)
 
   // create a network
   var container = document.getElementById("mynetwork2");
@@ -633,9 +634,11 @@ console.log(colorDis)
       stabilization: { iterations: 150 },
     },
   };
-  var network = new vis.Network(container, data, options);
-}
+    var network = new vis.Network(container, data, options);
+  }
 
-window.addEventListener("load", () => {
-  draw();
-});
+  window.addEventListener("load", () => {
+    draw();
+  });
+
+//draw();

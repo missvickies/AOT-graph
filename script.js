@@ -330,12 +330,6 @@ if ( neg.includes(nodes[i].id)){ edges.push({from: 44, to: nodes[i].id, color: "
  if ( pos.includes(nodes[i].id)){ edges.push({from: 44, to: nodes[i].id, color: "green"}) }
 }
 
-// //titans
-// for (let i = 0; i < nodes.length ; i++) {
-//   var matches = [];
-//   if ( ! ~ matches.indexOf(nodes[i].label))
-//   { edges.push({from: 44, to: nodes[i].id, color: "red"}) }
-// }
 
 console.log("Nodes: ", nodes.length)
 console.log("Edges: ", edges.length)
@@ -364,6 +358,7 @@ if(colorDis.hasOwnProperty(element.color)){
 }
 });
 
+
 // Create items array
 var items = Object.keys(degreeDis).map(function(key) {
 return [key, degreeDis[key]];
@@ -374,6 +369,7 @@ items.sort(function(first, second) {
 return second[1] - first[1];
 });
 
+//console.log(degreeDis);
 console.log("Degree Distribution:", items)
 console.log("Graph Coloring:", colorDis)
 
@@ -409,8 +405,10 @@ console.log("Graph Coloring:", colorDis)
     },
   };
   var network = new vis.Network(container, data, options);
-}
+  }
 
-window.addEventListener("load", () => {
-  draw();
-});
+  window.addEventListener("load", () => {
+    draw();
+  });
+
+//draw();
