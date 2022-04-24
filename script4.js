@@ -162,7 +162,7 @@ function draw() {
 
     //positive edges
     let pos = [];
-    var matches2 = ['Zeke Jaeger/Beast Titan', 'Mikasa Ackermann', 'Erwin Smith', 'Armin Arlert', 'Carla Jaeger', 'Grisha Jaeger', 'Sasha Braus',
+    var matches2 = ['Zeke Jaeger/Beast Titan', 'Mikasa Ackermann', 'Erwin Smith', 'Carla Jaeger', 'Grisha Jaeger', 'Sasha Braus',
       'Jaegerist', 'Volunteers', 'Yelena', 'Oonyakapon', "Dina Fritz/Smiling Titan", 'Survey Corps'];
     if (~matches2.indexOf(nodes[i].label)) { pos.push(nodes[i].id) }
     if (pos.includes(nodes[i].id)) { edges.push({ from: 0, to: nodes[i].id, color: "green" }) }
